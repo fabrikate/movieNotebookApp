@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf8'>
+  <title>Movie Notebook</title>
+</head>
+<body>
+  <h1>Movie Notebook</h1>
+  <p>The notebook to track what Academy Award winner movies you need to watch</p>
+  <a href='/movies/add'>Add A Movie</a>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th><img src={{artwork}} alt='movie Artwork' /></th>
+        <th>Year</th>
+        <th>Academy Award</th>
+        <th>Rotten Tomatos Grade</th>
+        <th>Favorite?</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each movies}}
+      <tr>
+        <td>{{title}}</td>
+        <td>{{artwork}}</td>
+        <td>{{year}}</td>
+        <td>{{academyAward}}</td>
+        <td>{{rottenTomatoRate}}</td>
+        <td>{{favorite}}</td>
+        <td><a href='movies/{{id}}/edit'>√</a></td>
+        <td><form action='/movies/{{id}}/?_method=delete' method='POST'><button>x</button></form></td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf8'>
+  <title>Add a Movie | Movie Notebook</title>
+</head>
+<body>
+  <h1>Add a Movie to your Movie Notebook</h1>
+  <p>The notebook to track what Academy Award winner movies you need to watch</p>
+  <form action='/movies' method='POST'>
+    <br><label>Movie Title:
+    <input name='movie[title]' placeholder='Movie Title' />
+  </label>
+    <br><label>URL to Movie Artwork:
+    <input name='movie[artwork]' placeholder='Movie Artwork' />
+  </label>
+    <br><label>Year:
+    <input name='movie[year]' placeholder='Movie Year' />
+  </label>
+    <br><label>Academy Awards won (seperate by comma) :
+    <input name='movie[academyAward]' placeholder='Movie Academy Award' />
+  </label>
+    <br><label>Rotten Tomatoes Grade:
+    <input name='movie[rottenTomatoRate]' placeholder='Rotten Tomatoes Grade' />
+  </label>
+    <br><label>Favorite?
+    <input type='checkbox' name='movie[favorite]'  value='favorite'/>
+  </label>
+  <br>
+  <button>Add</button>
+</body>
+</html>
