@@ -2,6 +2,9 @@
 <html>
 <head>
   <meta charset='utf8'>
+  <link rel="stylesheet" href="stylesheets/app.css">
+  <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js'></script>
+  <script type="text/javascript" src='js/script.js'></script>
   <title>Movie Notebook</title>
 </head>
 <body>
@@ -12,11 +15,10 @@
     <thead>
       <tr>
         <th>Title</th>
-        <th><img src={{artwork}} alt='movie Artwork' /></th>
+        <th>Movie Artwork</th>
         <th>Year</th>
         <th>Academy Award</th>
         <th>Rotten Tomatos Grade</th>
-        <th>Favorite?</th>
         <th>Edit</th>
         <th>Delete</th>
       </tr>
@@ -25,11 +27,10 @@
       {{#each movies}}
       <tr>
         <td>{{title}}</td>
-        <td>{{artwork}}</td>
+        <td><img src={{artwork}} alt='movie Artwork' /></td>
         <td>{{year}}</td>
         <td>{{academyAward}}</td>
         <td>{{rottenTomatoRate}}</td>
-        <td>{{favorite}}</td>
         <td><a href='movies/{{id}}/edit'>√</a></td>
         <td><form action='/movies/{{id}}/?_method=delete' method='POST'><button>x</button></form></td>
       </tr>

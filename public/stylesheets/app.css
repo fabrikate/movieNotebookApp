@@ -1,0 +1,37 @@
+body {
+  background-color: #404745;
+  color: #D67354;
+}
+
+table {
+  width: 80%;
+  background-color: #7D706A;
+  color:#F1FCD7;
+  border: solid 8px #3A1414;
+  border-radius: 30px;
+  padding: 8px 8px;
+  margin: 15px 15px;
+}
+
+tr:hover {
+  background-color: #615753;
+}
+
+td, th {
+  padding: 6px 6px;
+}
+
+a {
+  text-decoration: none;
+  color: #D67354;
+  border: solid 4px #1C0602;
+  background-color: #3A1414;
+  box-shadow: 5px 2px 2px #0D0D0D;
+  padding: 2px 2px;
+  margin: 5px 5px;
+}
+
+a:active {
+  box-shadow: 2px 1px 1px #0D0D0D;
+}
+
