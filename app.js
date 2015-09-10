@@ -11,7 +11,7 @@ var db = require('./models');
 app = express();
 
 //get them working
-app.engine('handlebars', exphbs());
+app.engine('handlebars', exphbs({defaultLayout:'main'}));
 app.set('view engine', 'handlebars');
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended:true}));
